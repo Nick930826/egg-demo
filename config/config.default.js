@@ -62,6 +62,14 @@ module.exports = appInfo => {
     agent: false,
   };
 
+  config.cluster = {
+    listen: {
+      path: '',
+      port: 7002,
+      hostname: '0.0.0.0',
+    },
+  };
+
   return {
     ...config,
     ...userConfig,
